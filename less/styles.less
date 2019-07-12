@@ -25,6 +25,10 @@ h1, h3 {
   .bordered
 }
 
+h3 {
+  border-bottom-color: if((5 > 1), red)
+}
+
 .primary-text {
   color: @primary-color
 }
@@ -38,6 +42,10 @@ h1, h3 {
 .primary-btn:extend(.btn) {
   background: @primary-color;
   .text-color(@primary-color);
+
+  &:hover{
+    background: lighten(@primary-color, -10%);
+  }
 }
 
 ul#menu {

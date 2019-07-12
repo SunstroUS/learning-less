@@ -8,6 +8,9 @@ h3 {
   border-top: dotted 1px #000;
   border-bottom: solid 2px #000;
 }
+h3 {
+  border-bottom-color: red;
+}
 .primary-text {
   color: #3b5998;
 }
@@ -20,6 +23,9 @@ h3 {
 .primary-btn {
   background: #3b5998;
   color: white;
+}
+.primary-btn:hover {
+  background: #2d4373;
 }
 ul#menu {
   list-style: none;
