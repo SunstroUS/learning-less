@@ -1,5 +1,41 @@
+// Variables
+
 @background-color: #f4f4f4;
+@font-family: Tahoma;
+@primary-color: #3b5998;
+@secondary-color: #20B2AA;
+@line-height: 1em + 1em;
 
 body {
-  background: @background-color
+  background: @background-color;
+  font-family: @font-family;
+  line-height: @line-height
+}
+
+h1, h3 {
+  .bordered
+}
+
+.primary-text {
+  color: @primary-color
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 0;
+  .border-radius(10px)
+}
+
+.primary-btn:extend(.btn) {
+  background: @primary-color;
+  color: gray;
+}
+
+.border-radius(@radius) {
+  border-radius: @radius;
+}
+
+.bordered {
+  border-top: dotted 1px #000;
+  border-bottom: solid 2px #000;
 }
