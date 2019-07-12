@@ -6,6 +6,15 @@
 @secondary-color: #20B2AA;
 @line-height: 1em + 1em;
 
+// Text Color Mixin
+.text-color(@a) when (lightness(@a) >= 50%){
+  color:black;
+}
+
+.text-color(@a) when (lightness(@a) < 50%){
+  color: white;
+}
+
 body {
   background: @background-color;
   font-family: @font-family;
@@ -28,11 +37,12 @@ h1, h3 {
 
 .primary-btn:extend(.btn) {
   background: @primary-color;
-  color: gray;
+  .text-color(@primary-color);
 }
 
 ul#menu {
   list-style: none;
+  background: lighten(@secondary-color, 50%);
   li {
     padding: 10px 0;
     a {
